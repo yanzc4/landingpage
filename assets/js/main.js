@@ -74,3 +74,11 @@ formulario.addEventListener('submit', async function (e) {
         btnFormulario.disabled = false;
     }
 });
+
+document.getElementById('formulario').addEventListener('submit', function() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'formSubmission',
+        'formId': 'formulario'
+    });
+});
