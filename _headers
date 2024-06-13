@@ -2,3 +2,6 @@
   X-Robots-Tag: all
   Cache-Control: max-age=3600
   X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer-when-downgrade
