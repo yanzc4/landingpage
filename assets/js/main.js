@@ -40,7 +40,7 @@ const banner = new Swiper('#empresas', {
 let formulario = document.getElementById('formulario');
 let btnFormulario = document.getElementById('btnFormulario');
 
-btnFormulario.addEventListener('click', async function (e) {
+formulario.addEventListener('submit', async function (e) {
     e.preventDefault();
     btnFormulario.disabled = true;
     btnFormulario.textContent = 'Enviando...';
@@ -73,4 +73,12 @@ btnFormulario.addEventListener('click', async function (e) {
     } finally {
         btnFormulario.disabled = false;
     }
+});
+
+document.getElementById('formulario').addEventListener('submit', function() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'formSubmission',
+        'formId': 'formulario'
+    });
 });
